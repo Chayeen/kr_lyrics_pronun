@@ -4,8 +4,12 @@ import requests
 import re
 import urllib
 from bs4 import *
-
-url = "http://music.163.com/playlist?id=614151599"
+import pdb
+# 955274121 韩语
+# 614151599 我喜欢的
+# 40131331 百变女王T-ara 绝妙中速慢节奏
+# 53656860 T-ara无重复精选
+url = "http://music.163.com/playlist?id=53656860"
 headers = {"Host":" music.163.com","User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"
 #不必要的header属性可能会影响响应报文的编码方式，所以把它们注释掉
 #"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -32,10 +36,15 @@ soup = BeautifulSoup(html, "html.parser")
 
 # print(soup.ul.children)
 #打开1.txt 把歌单中的歌词写入
-f=open('./myfavoritesong.txt','w',encoding='utf-8')
+# f=open('./myfavoritesong.txt','w',encoding='utf-8')
 for item in soup.ul.children:
+    #取出歌单里歌曲吗名
+    song_name = item('a')[0].get_text()
+    # print(song_name)
+    # pdb.set_trace()
+    f=open('./lyrics/'+song_name+'.txt','w',encoding='utf-8')
+    # f.write(song_name)
     #取出歌单里歌曲的id  形式为：/song?id=11111111
-    # print(item.find('a'))
     song_id = item('a')[0].get("href",None)
     #利用正则表达式提取出song_id的数字部分sid
     pat = re.compile(r'[0-9].*$')
@@ -55,7 +64,7 @@ for item in soup.ul.children:
     lrc = lrc.strip()
     # print(lrc)
     f.write(lrc)
-f.close()
+    f.close()
 
 # 作者：小太阳花儿
 # 链接：https://www.jianshu.com/p/c0ae445023a2
