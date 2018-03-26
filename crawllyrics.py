@@ -5,7 +5,7 @@ import re
 import urllib
 from bs4 import *
 
-url = "http://music.163.com/#/playlist?id=614151599"
+url = "http://music.163.com/playlist?id=614151599"
 headers = {"Host":" music.163.com","User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"
 #不必要的header属性可能会影响响应报文的编码方式，所以把它们注释掉
 #"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -23,7 +23,14 @@ response = urllib.request.urlopen(request)
 html = response.read().decode('utf-8','ignore')
 soup = BeautifulSoup(html, "html.parser")
 
-print(soup.ul)
+# links = soup.find('ul', class_='f-hide').findall('a')
+# song_id = link.get('href').split('=')[-1]
+# song_name = link.get_text()
+# print(song_id,song_name)
+
+# print(soup)
+
+# print(soup.ul.children)
 #打开1.txt 把歌单中的歌词写入
 f=open('./myfavoritesong.txt','w',encoding='utf-8')
 for item in soup.ul.children:
@@ -46,7 +53,7 @@ for item in soup.ul.children:
     pat = re.compile(r'\[.*\]')
     lrc = re.sub(pat,"",lyric)
     lrc = lrc.strip()
-    print(lrc)
+    # print(lrc)
     f.write(lrc)
 f.close()
 
