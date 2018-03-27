@@ -9,7 +9,8 @@ import pdb
 # 614151599 我喜欢的
 # 40131331 百变女王T-ara 绝妙中速慢节奏
 # 53656860 T-ara无重复精选
-url = "http://music.163.com/playlist?id=53656860"
+# 153369263 Queen's福利，T-ara无重复最全收录
+url = "http://music.163.com/playlist?id=153369263"
 headers = {"Host":" music.163.com","User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"
 #不必要的header属性可能会影响响应报文的编码方式，所以把它们注释掉
 #"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
