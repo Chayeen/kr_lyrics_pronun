@@ -20,7 +20,7 @@ ne mam sum-gi-neun geo-ya
 사랑 하고 싶어 너와 하고 싶어
 sa-lang ha-go xi-Peo neo-wa ha-go xi-Peo
 가슴 깊은 곳에 꼭 꼭 숨어있는
-ka-seum ki-peun go-se ggog ggog su-meo-in-neun
+ka-seum ki-Peun go-se ggog ggog su-meo-in-neun
 겁쟁이 같은 네 사랑
 keob-jjaeng-i ga-Teun ne sa-lang
 미치게 만들어 날 웃게 만들어
@@ -56,7 +56,7 @@ al-myeon-seo mo-leun Ceog ne mam sum-gi-neun geo-ya
 사랑 하고 싶어 너와 하고 싶어
 sa-lang ha-go xi-Peo neo-wa ha-go xi-Peo
 가슴 깊은 곳에 꼭 꼭 숨어있는
-ka-seum ki-peun go-se ggog ggog su-meo-in-neun
+ka-seum ki-Peun go-se ggog ggog su-meo-in-neun
 겁쟁이 같은 네 사랑
 keob-jjaeng-i ga-Teun ne sa-lang
 미치게 만들어 날 웃게 만들어
@@ -84,7 +84,7 @@ mae-il neo ddae-mu-ne nan ka-seu-ma-li
 하는 나를 알까
 ha-neun na-leul al-gga
 사랑에 빠지게 하고
-sa-lang-e ppa-ji-ge ha-go
+sa-lang-e bba-ji-ge ha-go
 이런 날 모른 척 하고
 i-leon nal mo-leun Ceog ha-go
 아파 아파 매일 난
@@ -99,3 +99,8 @@ mal-do mo-ta-neun geo-ni
 sum-ba-ggog-jji-leun keu-man
 Love me babe
 Love me babe
+
+# 2018-03-29 10:00:21
+更新bug：改了2个T写成t的错误
+
+欢迎转载本博客文章，转载请注明出处，十分感谢。

@@ -10,9 +10,9 @@ keog-jjeong-do seul-Peum-do ta ggeun-nal jul a-la-sseo
 한걸음 두 걸음 올라갈수록
 han-geo-leum tu keo-leum ol-la-gal-su-log
 더욱더 멀게만 느껴져
-teo-ug-deo meol-ge-man neu-ggyeo-jyeo
+teo-ug-ddeo meol-ge-man neu-ggyeo-jyeo
 가끔은 울고 싶어 잠깐
-ka-ggeu-meun ul-go xi-peo jam-ggan
+ka-ggeu-meun ul-go xi-Peo jam-ggan
 이러면 안돼 왈칵
 i-leo-myeon an-dwae wal-Kag
 쏟아지는 눈물을 가두고
@@ -20,13 +20,13 @@ sso-da-ji-neun nun-mu-leul ga-tu-go
 내 맘을 잠가
 nae ma-meul jam-ga
 때론 주저앉고 싶어도
-ddae-lon ju-jeo-an-go xi-peo-do
+ddae-lon ju-jeo-an-go xi-Peo-do
 견디는 게 힘들어도
 kyeon-di-neun ge him-deu-leo-do
 그래도 난 언제나 행복해야 돼
 keu-lae-do na-neon-je-na haeng-bog-hae-ya dwae
 지친 하루 끝에 힘없이
-ji-qin ha-lu ggeu-de hi-meob-xxi
+ji-qin ha-lu ggeu-Te hi-meob-xxi
 자리에 누우면
 ca-li-e nu-u-myeon
 괜히 바보처럼 슬퍼지는데
@@ -58,7 +58,7 @@ nae-ga ju-in-gong-i doel ddae
 아닌척하지만 사실은 겁이 나
 a-nin-Ceo-ka-ji-man sa-xi-leun keo-pi na
 지친 하루 끝에 힘없이
-ji-qin ha-lu ggeu-de hi-meob-xxi
+ji-qin ha-lu ggeu-Te hi-meob-xxi
 자리에 누우면
 ca-li-e nu-u-myeon
 괜히 바보처럼 슬퍼지는데
@@ -101,3 +101,7 @@ pal-ge pin-na-neun ma-ji-mag pyeo-li doel geo-ya
 # 2018-03-28 17:24:27
 更新bug：主要是有一些地方没有考虑到鼻音化、ㅎ脱落、紧音化等音变的影响，昨天看了几遍，检查出来了一些，肯定还有没检查出来的，如果后面发现了，再更新。
 
+# 2018-03-29 09:46:54
+更新bug：改了2个P写成p和2个dd写成d的错误。
+
+欢迎转载本博客文章，转载请注明出处，十分感谢。
