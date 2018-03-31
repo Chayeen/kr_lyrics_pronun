@@ -1,7 +1,7 @@
 作曲 : 박덕상/박현중
- b/pag-t/deog-s(x)ang/b/pag-hyeon-c(j)/jung
+ p/bag-t/deog-s(x)ang/p/bag-hyeon-c(j)/jung
  作词 : 박덕상/박현중
- b/pag-t/deog-s(x)ang/b/pag-hyeon-c(j)/jung
+ p/bag-t/deog-s(x)ang/p/bag-hyeon-c(j)/jung
 꼭 꼭 숨겨서 못 찾겠다 네 마음
 ggog ggog s(x)um-k/gyeo-s(x)eo mod C(q)ad-k/ged-t/da ne ma-eum
 꼭 꼭 숨어서 알 수 없는 네 마음
@@ -29,7 +29,7 @@ a-Peul-gga t/du-lyeo-un k/geol-gga
 말도 못하는 거니
 mal-t/do mod-ha-neun k/geo-ni
 숨바꼭질은 그만 Love me babe
-s(x)um-b/pa-ggog-c(j)/jil-eun k/geu-man
+s(x)um-p/ba-ggog-c(j)/jil-eun k/geu-man
 가슴이 먹먹
 k/ga-s(x)eum-i meog-meog
 눈물이 뚝뚝
@@ -63,13 +63,13 @@ mi-C(q)i-k/ge man-t/deul-eo nal ud-k/ge man-t/deul-eo
 아플까 두려운 걸까
 a-Peul-gga t/du-lyeo-un k/geol-gga
 말도 못하는 거니 숨바꼭질은 그만
-mal-t/do mod-ha-neun k/geo-ni s(x)um-b/pa-ggog-c(j)/jil-eun k/geu-man
+mal-t/do mod-ha-neun k/geo-ni s(x)um-p/ba-ggog-c(j)/jil-eun k/geu-man
 잡힐 듯 말 듯 또 도망가
 c(j)/jab-hil t/deud mal t/deud ddo t/do-mang-k/ga
 그렇게 숨어만 있니
 k/geu-leod-k/ge s(x)um-eo-man id-ni
 남자답게 그만 말을 해봐
-nam-c(j)/ja-t/dab-k/ge k/geu-man mal-eul hae-b/pwa
+nam-c(j)/ja-t/dab-k/ge k/geu-man mal-eul hae-p/bwa
 나를 사랑한다고
 na-leul s(x)a-lang-han-t/da-k/go
 오늘도 주륵주륵
@@ -81,7 +81,7 @@ mae-il neo ddae-mun-e nan k/ga-s(x)eum-al/h-i
 하는 나를 알까
 ha-neun na-leul al-gga
 사랑에 빠지게 하고
-s(x)a-lang-e ppa-c(j)/ji-k/ge ha-k/go
+s(x)a-lang-e bba-c(j)/ji-k/ge ha-k/go
 이런 날 모른 척 하고
 i-leon nal mo-leun C(q)eog ha-k/go
 아파 아파 매일 난
@@ -93,5 +93,5 @@ a-Peul-gga t/du-lyeo-un k/geol-gga
 말도 못하는 거니
 mal-t/do mod-ha-neun k/geo-ni
 숨바꼭질은 그만
-s(x)um-b/pa-ggog-c(j)/jil-eun k/geu-man
+s(x)um-p/ba-ggog-c(j)/jil-eun k/geu-man
 Love me babe

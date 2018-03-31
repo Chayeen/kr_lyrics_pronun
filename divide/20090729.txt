@@ -1,7 +1,7 @@
 作曲 : 똘아이박/피터팬
- ddol-a-i-b/pag/Pi-Teo-Paen
+ ddol-a-i-p/bag/Pi-Teo-Paen
  作词 : 똘아이박/피터팬
- ddol-a-i-b/pag/Pi-Teo-Paen
+ ddol-a-i-p/bag/Pi-Teo-Paen
 화려한 저 조명 아래에 서면
 hwa-lyeo-han c(j)/jeo c(j)/jo-myeong a-lae-e s(x)eo-myeon
 걱정도 슬픔도 다 끝날 줄 알았어
@@ -23,33 +23,33 @@ ddae-lon c(j)/ju-c(j)/jeo-an/d-k/go s(x)ib-eo-t/do
 견디는 게 힘들어도
 k/gyeon-t/di-neun k/ge him-t/deul-eo-t/do
 그래도 난 언제나 행복해야 돼
-k/geu-lae-t/do nan eon-c(j)/je-na haeng-b/pog-hae-ya t/dwae
+k/geu-lae-t/do nan eon-c(j)/je-na haeng-p/bog-hae-ya t/dwae
 지친 하루 끝에 힘없이
 c(j)/ji-C(q)in ha-lu ggeud-e him-eob/d-i
 자리에 누우면
 c(j)/ja-li-e nu-u-myeon
 괜히 바보처럼 슬퍼지는데
-k/gwaen-hi b/pa-b/po-C(q)eo-leom s(x)eul-Peo-c(j)/ji-neun-t/de
+k/gwaen-hi p/ba-p/bo-C(q)eo-leom s(x)eul-Peo-c(j)/ji-neun-t/de
 저기 밤하늘을
-c(j)/jeo-k/gi b/pam-ha-neul-eul
+c(j)/jeo-k/gi p/bam-ha-neul-eul
 수놓은 저 많은 별 중에
-s(x)u-nod-eun c(j)/jeo man/h-eun b/pyeol c(j)/jung-e
+s(x)u-nod-eun c(j)/jeo man/h-eun p/byeol c(j)/jung-e
 다른 별 사이에
-t/da-leun b/pyeol s(x)a-i-e
+t/da-leun p/byeol s(x)a-i-e
 감춰져 보이지 않는 별
-k/gam-C(q)wo-c(j)/jyeo b/po-i-c(j)/ji an/h-neun b/pyeol
+k/gam-C(q)wo-c(j)/jyeo p/bo-i-c(j)/ji an/h-neun p/byeol
 괜찮아 지금은 비록 가려있지만
-k/gwaen-C(q)an/h-a c(j)/ji-k/geum-eun b/pi-log k/ga-lyeo-id-c(j)/ji-man
+k/gwaen-C(q)an/h-a c(j)/ji-k/geum-eun p/bi-log k/ga-lyeo-id-c(j)/ji-man
 나도 세상을 향해
 na-t/do s(x)e-s(x)ang-eul hyang-hae
 밝게 빛나는 별이 되고파
-b/pag/l-k/ge b/pid-na-neun b/pyeol-i t/doe-k/go-Pa
+p/bag/l-k/ge p/bid-na-neun p/byeol-i t/doe-k/go-Pa
 가끔은 사람들의 기대와
 k/ga-ggeum-eun s(x)a-lam-t/deul-ui k/gi-t/dae-wa
 누군가의 실망
 nu-k/gun-k/ga-ui s(x)il-mang
 감당할 수 없는 큰 부담이 돼
-k/gam-t/dang-hal s(x)u eob/d-neun Keun b/pu-t/dam-i t/dwae
+k/gam-t/dang-hal s(x)u eob/d-neun Keun p/bu-t/dam-i t/dwae
 사람들의 얘기 속에
 s(x)a-lam-t/deul-ui yae-k/gi s(x)og-e
 내가 주인공이 될 때
@@ -61,38 +61,38 @@ c(j)/ji-C(q)in ha-lu ggeud-e him-eob/d-i
 자리에 누우면
 c(j)/ja-li-e nu-u-myeon
 괜히 바보처럼 슬퍼지는데
-k/gwaen-hi b/pa-b/po-C(q)eo-leom s(x)eul-Peo-c(j)/ji-neun-t/de
+k/gwaen-hi p/ba-p/bo-C(q)eo-leom s(x)eul-Peo-c(j)/ji-neun-t/de
 저기 밤하늘을
-c(j)/jeo-k/gi b/pam-ha-neul-eul
+c(j)/jeo-k/gi p/bam-ha-neul-eul
 수놓은 저 많은 별 중에
-s(x)u-nod-eun c(j)/jeo man/h-eun b/pyeol c(j)/jung-e
+s(x)u-nod-eun c(j)/jeo man/h-eun p/byeol c(j)/jung-e
 다른 별 사이에
-t/da-leun b/pyeol s(x)a-i-e
+t/da-leun p/byeol s(x)a-i-e
 감춰져 보이지 않는 별
-k/gam-C(q)wo-c(j)/jyeo b/po-i-c(j)/ji an/h-neun b/pyeol
+k/gam-C(q)wo-c(j)/jyeo p/bo-i-c(j)/ji an/h-neun p/byeol
 괜찮아 지금은 비록 희미하지만
-k/gwaen-C(q)an/h-a c(j)/ji-k/geum-eun b/pi-log hui-mi-ha-c(j)/ji-man
+k/gwaen-C(q)an/h-a c(j)/ji-k/geum-eun p/bi-log hui-mi-ha-c(j)/ji-man
 나도 세상을 향해
 na-t/do s(x)e-s(x)ang-eul hyang-hae
 밝게 빛나는 큰 별이 되어
-b/pag/l-k/ge b/pid-na-neun Keun b/pyeol-i t/doe-eo
+p/bag/l-k/ge p/bid-na-neun Keun p/byeol-i t/doe-eo
 그때는 웃으며
 k/geu-ddae-neun ud-eu-myeo
 지금을 돌아볼 수 있겠지
-c(j)/ji-k/geum-eul t/dol-a-b/pol s(x)u id-k/ged-c(j)/ji
+c(j)/ji-k/geum-eul t/dol-a-p/bol s(x)u id-k/ged-c(j)/ji
 그날이 올 때까지 멈추지 않아
 k/geu-nal-i ol ddae-gga-c(j)/ji meom-C(q)u-c(j)/ji an/h-a
 저기 밤하늘을
-c(j)/jeo-k/gi b/pam-ha-neul-eul
+c(j)/jeo-k/gi p/bam-ha-neul-eul
 수놓은 저 많은 별 중에
-s(x)u-nod-eun c(j)/jeo man/h-eun b/pyeol c(j)/jung-e
+s(x)u-nod-eun c(j)/jeo man/h-eun p/byeol c(j)/jung-e
 다른 별 사이에
-t/da-leun b/pyeol s(x)a-i-e
+t/da-leun p/byeol s(x)a-i-e
 감춰진 난 아주 작은 별
-k/gam-C(q)wo-c(j)/jin nan a-c(j)/ju c(j)/jag-eun b/pyeol
+k/gam-C(q)wo-c(j)/jin nan a-c(j)/ju c(j)/jag-eun p/byeol
 괜찮아 지금은 비록 희미하지만
-k/gwaen-C(q)an/h-a c(j)/ji-k/geum-eun b/pi-log hui-mi-ha-c(j)/ji-man
+k/gwaen-C(q)an/h-a c(j)/ji-k/geum-eun p/bi-log hui-mi-ha-c(j)/ji-man
 나도 세상을 향해
 na-t/do s(x)e-s(x)ang-eul hyang-hae
 밝게 빛나는 마지막 별이 될 거야
-b/pag/l-k/ge b/pid-na-neun ma-c(j)/ji-mag b/pyeol-i t/doel k/geo-ya
+p/bag/l-k/ge p/bid-na-neun ma-c(j)/ji-mag p/byeol-i t/doel k/geo-ya
