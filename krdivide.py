@@ -66,7 +66,7 @@ for each_file in data_files:
                     temp_line = temp_line[:-1]  + each_line[i]
                     # temp_line = temp_line  + each_line[i]
             # temp_line = temp_line[:-1]
-            temp_line = each_line.strip('\n') +  '\n'  +   temp_line    
+            temp_line = each_line.strip('\n') +  '\n'  +   temp_line
             temp_file_string = temp_file_string + temp_line +  '\n' 
         temp_file_string = temp_file_string[:-2]
         print ( each_file + "-"*5 + ">finished")   #finish  
