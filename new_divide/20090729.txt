@@ -50,8 +50,8 @@
 [저기 밤하느를]
 [c/jeo-k/gi p/bam-ha-neu-leul]
 수놓은 저 많은 별 중에
-[수노은 저 만은 별 중에]
-[su-no-eun c/jeo man-eun p/byeol c/jung-e]
+[수노은 저 마는 별 중에]
+[su-no-eun c/jeo ma-neun p/byeol c/jung-e]
 다른 별 사이에
 [다른 별 사이에]
 [t/da-leun p/byeol sa-i-e]
@@ -59,8 +59,8 @@
 [감춰져 보이지 않는 별]
 [k/gam-Cwo-jyeo p/bo-i-ji an-neun p/byeol]
 괜찮아 지금은 비록 가려있지만
-[괜찬아 지그믄 비록 가려있찌만]
-[k/gwaen-Can-a ji-k/geu-meun p/bi-log k/ga-lyeo-id-jji-man]
+[괜차나 지그믄 비록 가려있찌만]
+[k/gwaen-Ca-na ji-k/geu-meun p/bi-log k/ga-lyeo-id-jji-man]
 나도 세상을 향해
 [나도 세상을 향해]
 [na-t/do se-sang-eul hyang-hae]
@@ -69,7 +69,7 @@
 [p/bag-gge p/bin-na-neun p/byeo-li t/doe-k/go-Pa]
 가끔은 사람들의 기대와
 [가끄믄 사람드릐 기대와]
-[k/ga-ggeu-meun sa-lam-t/deu-lui k/gi-t/dae-wa]
+[k/ga-ggeu-meun sa-lam-t/deu-li k/gi-t/dae-wa]
 누군가의 실망
 [누군가의 실망]
 [nu-k/gun-k/ga-ui xil-mang]
@@ -78,7 +78,7 @@
 [k/gam-t/dang-hal su eom-neun Keun p/bu-t/da-mi t/dwae]
 사람들의 얘기 속에
 [사람드릐 얘기 소게]
-[sa-lam-t/deu-lui yae-k/gi so-k/ge]
+[sa-lam-t/deu-li yae-k/gi so-k/ge]
 내가 주인공이 될 때
 [내가 주인공이 될 때]
 [nae-k/ga c/ju-in-k/gong-i t/doel ddae]
@@ -98,8 +98,8 @@
 [저기 밤하느를]
 [c/jeo-k/gi p/bam-ha-neu-leul]
 수놓은 저 많은 별 중에
-[수노은 저 만은 별 중에]
-[su-no-eun c/jeo man-eun p/byeol c/jung-e]
+[수노은 저 마는 별 중에]
+[su-no-eun c/jeo ma-neun p/byeol c/jung-e]
 다른 별 사이에
 [다른 별 사이에]
 [t/da-leun p/byeol sa-i-e]
@@ -107,8 +107,8 @@
 [감춰져 보이지 않는 별]
 [k/gam-Cwo-jyeo p/bo-i-ji an-neun p/byeol]
 괜찮아 지금은 비록 희미하지만
-[괜찬아 지그믄 비록 희미하지만]
-[k/gwaen-Can-a ji-k/geu-meun p/bi-log hui-mi-ha-ji-man]
+[괜차나 지그믄 비록 희미하지만]
+[k/gwaen-Ca-na ji-k/geu-meun p/bi-log hi-mi-ha-ji-man]
 나도 세상을 향해
 [나도 세상을 향해]
 [na-t/do se-sang-eul hyang-hae]
@@ -122,14 +122,14 @@
 [지그믈 도라볼 수 있껬찌]
 [ji-k/geu-meul t/do-la-p/bol su id-gged-jji]
 그날이 올 때까지 멈추지 않아
-[그나리 올 때까지 멈추지 안아]
-[k/geu-na-li ol ddae-gga-ji meom-Cu-ji an-a]
+[그나리 올 때까지 멈추지 아나]
+[k/geu-na-li ol ddae-gga-ji meom-Cu-ji a-na]
 저기 밤하늘을
 [저기 밤하느를]
 [c/jeo-k/gi p/bam-ha-neu-leul]
 수놓은 저 많은 별 중에
-[수노은 저 만은 별 중에]
-[su-no-eun c/jeo man-eun p/byeol c/jung-e]
+[수노은 저 마는 별 중에]
+[su-no-eun c/jeo ma-neun p/byeol c/jung-e]
 다른 별 사이에
 [다른 별 사이에]
 [t/da-leun p/byeol sa-i-e]
@@ -137,8 +137,8 @@
 [감춰진 난 아주 자근 별]
 [k/gam-Cwo-jin nan a-c/ju c/ja-k/geun p/byeol]
 괜찮아 지금은 비록 희미하지만
-[괜찬아 지그믄 비록 희미하지만]
-[k/gwaen-Can-a ji-k/geu-meun p/bi-log hui-mi-ha-ji-man]
+[괜차나 지그믄 비록 희미하지만]
+[k/gwaen-Ca-na ji-k/geu-meun p/bi-log hi-mi-ha-ji-man]
 나도 세상을 향해
 [나도 세상을 향해]
 [na-t/do se-sang-eul hyang-hae]

@@ -1,5 +1,6 @@
 #coding:utf-8  
-  
+
+# 感觉需要先对歌词过滤一下，有些歌词可能输入的格式就不太好，防御性编程
 import codecs  
 import glob  
 import codecs  
@@ -119,7 +120,7 @@ def necessary_re_compile(rels,repldic):
     for x in former:
             rels.append(re.compile(x+'-'+later))
             doubledivide = double2single(x)
-            repldic[re.compile(x+'-'+later)] = doubledivide[0]+'-'+later
+            repldic[re.compile(x+'-'+later)] = '-'+doubledivide[0]
 # [必须规则] ㅅ连音需紧音化
     former = ["ㄳ","ㄽ","ㅄ","ㅆ"]
     for x in former:

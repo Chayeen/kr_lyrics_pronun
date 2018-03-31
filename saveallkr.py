@@ -10,7 +10,7 @@ first_parts_yin = ("k/g", "gg", "n","t/d","dd","l","m","p/b","bb","s(x)","ss(xx)
 second_parts =("ㅏ", "ㅐ", "ㅑ", "ㅒ", "ㅓ", "ㅔ", "ㅕ", "ㅖ", "ㅗ", "ㅗㅏ", "ㅗㅐ", "ㅗㅣ", "ㅛ", "ㅜ", "ㅜㅓ", "ㅜㅔ", "ㅜㅣ", "ㅠ", "ㅡ", "ㅡㅣ", "ㅣ")  
 second_parts_yin =("a", "ae", "ya", "yae", "eo", "e", "yeo", "ye", "o", "wa", "wae", "oe", "yo", "u", "wo", "we", "wi", "yu", "eu", "ui", "i")  
 third_parts = ("", "ㄱ", "ㄲ", "ㄳ", "ㄴ", "ㄵ", "ㄶ", "ㄷ", "ㄹ", "ㄺ", "ㄻ", "ㄼ", "ㄽ", "ㄾ", "ㄿ", "ㅀ", "ㅁ", "ㅂ", "ㅄ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ")  
-third_parts_yin = ("", "g", "g", "g", "n", "n", "n", "d", "l", "g", "m", "l", "l", "l", "b", "l", "m", "b", "b/d", "d", "d", "ng", "d", "d", "g", "d", "b", "d")  
+third_parts_yin = ("", "g", "g", "g", "n", "n", "n", "d", "l", "g", "m", "l", "l", "l", "b", "l", "m", "b", "b", "d", "d", "ng", "d", "d", "g", "d", "b", "d")  
 
 def print_all_kr(dic):
     for first in range(0,len(first_parts)):
@@ -39,7 +39,11 @@ def print_all_kr(dic):
                             first_yin = 'q'
                 else:
                     first_yin = first_parts_yin[first]
-                dic[kr_word] = first_yin + second_parts_yin[second] + third_parts_yin[third]
+                if second_parts[second] == "ㅡㅣ" and first_parts[first] !="ㅇ":
+                    second_yin = 'i'
+                else:
+                    second_yin = second_parts_yin[second]
+                dic[kr_word] = first_yin + second_yin + third_parts_yin[third]
 kr_word_dic = {}
 print_all_kr(kr_word_dic)
 
