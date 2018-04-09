@@ -350,7 +350,8 @@ for each_file in data_files:
             #         break
             #     else :  
             #         temp_line = temp_line  + each_line[i]
-            temp_line = each_line.strip('\n') +  '\n'  +   kr_yinbiao.strip('\n') +  '\n'  + la_yinbiao.strip('\n')
+            # temp_line = each_line.strip('\n') +  '\n'  +   kr_yinbiao.strip('\n') +  '\n'  + la_yinbiao.strip('\n')
+            temp_line = each_line.strip('\n') +  '\n'  + la_yinbiao.strip('\n')
             # re.sub('ㄱ/ㄴ/ㄷ/ㄹ/ㅁ/ㅂ/ㅅ/ㅈ/ㅊ/ㅋ/ㅌ/ㅍ|ㅇ', '|ㄱ/ㄴ/ㄷ/ㄹ/ㅁ/ㅂ/ㅅ/ㅈ/ㅊ/ㅋ/ㅌ/', temp_line, count=0, flags=0)
             temp_file_string = temp_file_string + temp_line +  '\n' 
         temp_file_string = temp_file_string[:-1]

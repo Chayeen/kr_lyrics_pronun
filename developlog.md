@@ -131,3 +131,61 @@ third_parts = ("", "ㄱ", "ㄲ", "ㄳ", "ㄴ", "ㄵ", "ㄶ", "ㄷ", "ㄹ", "ㄺ"
 
 # 2018-03-27 17:26:12
 刚刚又整理了一些，现在有217首歌，不过应该有比较多的重复版本，真正的无重复可能差不多160篇，每天一个，不能多，嗯，剩下的时间就给代码优化以及语法学习。
+
+# 2018-04-09 22:20:50
+今天在实验室优化了送气化的代码，另外感觉不太想把韩文字音标输出出来，还是直接只输出罗马音标比较好。
+之前还找到了一个把网易云音乐的缓存文件转换成mp3文件的程序，可以考虑用python对音频文件进行语音识别——韩语语音识别——能够输出一些音频和文字对应的语料库，可能可以做到直接语音识别韩文字。
+另外还想做解析韩文字，文字翻译or语法翻译的程序——感觉是要实现一个韩语翻译器的感觉——其实主要是想要输入一段歌词，能够把歌词中涉及到的韩语单词输出出来，背诵，可能要结合NAVER进行。
+
+# 2018-04-09 23:01:43
+[这个貌似是NAVER的官方开发说明文档](https://developers.naver.com/docs/labs/translator/)：遗憾的是你妹的是韩语，有点看不懂，虽然有代码，感觉貌似是通过post请求，返回json格式的字符串来做的，先作为参考吧
+[一个naver翻译的包，是Haskell语言的](https://hackage.haskell.org/package/naver-translate)：举的例子用的是汉语翻译成日语，不确定是否能够翻译成中文，这里是github的[源码](https://github.com/dahlia/naver-translate)
+[又一个github上的代码](https://github.com/pjc0247/NaverTranslator)：但是只有一个RADEME.md，感觉是写的Java，感觉可以参考一下代码，写个python版本的。
+[又一个node.js的版本](https://www.npmjs.com/package/naver-translator)：真的可以考虑写个python的了。
+```java
+NaverTranslator
+
+NAVER TRANSLATE API INTERFACE w/ StrongHTTP
+
+// [Service("v1/language")]
+public interface TranslateAPIInterface : WithCommonHeader
+{
+    [Post, Resource("translate")]
+    [JsonPath("message.result.translatedText")]
+    Task<string> Translate(
+        [RequestUri]string source, [RequestUri]string target,
+        [RequestUri]string text);
+}
+
+public class TranslateAPI
+{
+    public static TranslateAPIInterface Create(string clientId, string clientSecret)
+    {
+        var api = RemotePoint.Create<TranslateAPIInterface>("https://openapi.naver.com");
+
+        api.commonHeaders = new Dictionary<string, string>()
+        {
+            ["X-Naver-Client-Id"] = clientId,
+            ["X-Naver-Client-Secret"] = clientSecret
+        };
+
+        return api;
+    }
+}
+public class TargetLanguages
+{
+    public static readonly string Korean = "ko";
+    public static readonly string English = "en";
+    public static readonly string Chinese = "zh-CN";
+    public static readonly string Japanese = "ja";
+}
+Usage
+
+var tr = TranslateAPI.Create("CLIENT_ID", "CLIENT_SECRET");
+
+var translated = await tr.Translate(
+    TargetLanguages.Korean, TargetLanguages.English,
+    "안녕");
+```
+# 2018-04-09 23:13:28
+现在还有的比较关键的问题就是，用naver可以翻译整个句子，不过如果想要对一句话里面的单词进行输出，可能需要一个一个单独进行查询，实在不行就直接按照空格进行隔断好了。
