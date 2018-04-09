@@ -8,8 +8,8 @@
 [묻꼬 시펏써요 그대는 어떤가요]
 [mud-ggo xi-Peod-sseo-yo k/geu-t/dae-neun eo-ddeon-k/ga-yo]
 난 이렇게 그대가 떠났던
-[난 이렇케 그대가 떠났떤]
-[nan i-leod-Ke k/geu-t/dae-k/ga ddeo-nad-ddeon]
+[난 이러케 그대가 떠났떤]
+[nan i-leo-Ke k/geu-t/dae-k/ga ddeo-nad-ddeon]
 그 날에 살고 있죠
 [그 나레 살고 있쬬]
 [k/geu na-le sal-k/go id-jjyo]
@@ -62,8 +62,8 @@
 [어쩜 미려니란 이르메]
 [eo-jjeom mi-lyeo-ni-lan i-leu-me]
 갇혀 있나봐요 my love
-[같혀 인나봐요 my love]
-[k/gad-hyeo in-na-p/bwa-yo my love]
+[가텨 인나봐요 my love]
+[k/ga-Tyeo in-na-p/bwa-yo my love]
 계절마다 그대가 생각날 거야
 [계절마다 그대가 생강날 거야]
 [k/gye-c/jeol-ma-t/da k/geu-t/dae-k/ga saeng-k/gang-nal k/geo-ya]

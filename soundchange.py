@@ -52,6 +52,7 @@ def double2single(double3):
         return "ㅅ" + "ㅅ"
     else:
         print("input error, double3 must be in [ 'ㄲ', 'ㄳ',  'ㄵ', 'ㄶ',  'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅄ', 'ㅆ']")
+        # return double3
 
 def tight(single):
     if single == "ㄱ":
@@ -66,6 +67,7 @@ def tight(single):
         return "ㅉ"
     else:
         print("input error, tight must be in ['ㄱ','ㄷ','ㅂ','ㅅ','ㅈ']")
+        # return single
 
 def palatalize(single):
     if single == "ㄷ":
@@ -74,6 +76,7 @@ def palatalize(single):
         return "ㅊ"
     else:
         print("input error, palatalize must be in ['ㄷ','ㅌ']")
+        # return single
 
 def aspirate(single):
     if single == "ㄱ":
@@ -86,6 +89,7 @@ def aspirate(single):
         return "ㅍ"
     else:
         print("input error, aspirate must be in ['ㄱ','ㄷ','ㅈ','ㅂ']")
+        # return single
 
 def list2str(ls):
     tmp = ""
@@ -127,6 +131,7 @@ def necessary_re_compile(rels,repldic):
             rels.append(re.compile(x+'-'+later))
             doubledivide = double2single(x)
             repldic[re.compile(x+'-'+later)] = doubledivide[0]+'-'+tight(doubledivide[1])
+
 # [必须规则]收音鼻音化
     former = ["ㄱ","ㅋ","ㄲ","ㄺ","ㄳ"]
     later = ["ㄴ","ㅁ"]
@@ -170,38 +175,56 @@ def necessary_re_compile(rels,repldic):
     for x in former:
         for y in later:
             rels.append(re.compile(x+'-'+y))
-            repldic[re.compile(x+'-'+y)] = x+'-'+ tight(y)
+            if x == "ㅎ":
+                repldic[re.compile(x+'-'+y)] = '-'+ tight(y)
+            else:
+                doubledivide = double2single(x)
+                repldic[re.compile(x+'-'+y)] = doubledivide[0]+'-'+ tight(y)
 # [必须规则]ㅎ在前送气化
     former = ["ㅎ","ㄶ","ㅀ"]
     later = ["ㄱ","ㄷ","ㅈ"]
     for x in former:
         for y in later:
             rels.append(re.compile(x+'-'+y))
-            repldic[re.compile(x+'-'+y)] = x+'-'+ aspirate(y)
-# [必须规则]ㅎ在后送气化
-    former = ["ㄱ","ㄲ","ㄺ","ㄳ"]
+            # repldic[re.compile(x+'-'+y)] = x+'-'+ aspirate(y)
+            if x == "ㅎ":
+                repldic[re.compile(x+'-'+y)] = '-'+ aspirate(y)
+            else:
+                doubledivide = double2single(x)
+                repldic[re.compile(x+'-'+y)] = doubledivide[0]+'-'+ aspirate(y)
+# [必须规则]ㅎ在后送气化,"ㄳ""ㅆ","ㅄ",
+    former = ["ㄱ","ㄲ","ㄺ"]
     later = "ㅎ"
-    # for x in former:
-    #     pa_tmp = pa_tmp+ '|'+x
-    # pa_tmp = pa_tmp[:-1]
-    # print(pa_tmp)
-    pa_tmp = list2str(former)
-    rels.append(re.compile('['+pa_tmp+']'+'-'+later))
-    repldic[re.compile('['+pa_tmp+']'+'-'+later)] = aspirate("ㄱ")+'-'+later
-    former = ["ㄷ","ㅅ","ㅈ","ㅊ","ㅆ","ㅎ"]
-    # for x in former:
-    #     pa_tmp = pa_tmp+ '|'+x
-    # pa_tmp = pa_tmp[:-1]
-    pa_tmp = list2str(former)
-    rels.append(re.compile('['+pa_tmp+']'+'-'+later))
-    repldic[re.compile('['+pa_tmp+']'+'-'+later)] = aspirate("ㄷ")+'-'+later
-    former= ["ㅂ","ㅄ","ㄿ"]
-    # for x in former:
-    #     pa_tmp = pa_tmp+ '|'+x
-    # pa_tmp = pa_tmp[:-1]
-    pa_tmp = list2str(former)
-    rels.append(re.compile('['+pa_tmp+']'+'-'+later))
-    repldic[re.compile('['+pa_tmp+']'+'-'+later)] = aspirate("ㅂ")+'-'+later
+    for x in former:
+            rels.append(re.compile(x+'-'+later))
+            if x == "ㄱ":
+                repldic[re.compile(x+'-'+later)] = '-'+ aspirate("ㄱ")
+            else:
+                doubledivide = double2single(x)
+                repldic[re.compile(x+'-'+later)] = doubledivide[0]+'-'+ aspirate("ㄱ")
+    # pa_tmp = list2str(former)
+    # rels.append(re.compile('['+pa_tmp+']'+'-'+later))
+    # repldic[re.compile('['+pa_tmp+']'+'-'+later)] = aspirate("ㄱ")+'-'+later
+
+    former = ["ㄷ","ㅅ","ㅈ","ㅊ","ㅌ"]
+    for x in former:
+            rels.append(re.compile(x+'-'+later))
+            repldic[re.compile(x+'-'+later)] = '-'+ aspirate("ㄷ")
+    # pa_tmp = list2str(former)
+    # rels.append(re.compile('['+pa_tmp+']'+'-'+later))
+    # repldic[re.compile('['+pa_tmp+']'+'-'+later)] = '-'+aspirate("ㄷ")
+
+    former= ["ㅂ","ㄿ"]
+    for x in former:
+            rels.append(re.compile(x+'-'+later))
+            if x == "ㅂ":
+                repldic[re.compile(x+'-'+later)] = '-'+ aspirate("ㅂ")
+            else:
+                doubledivide = double2single(x)
+                repldic[re.compile(x+'-'+later)] = doubledivide[0]+'-'+ aspirate("ㅂ")
+    # pa_tmp = list2str(former)
+    # rels.append(re.compile('['+pa_tmp+']'+'-'+later))
+    # repldic[re.compile('['+pa_tmp+']'+'-'+later)] = aspirate("ㅂ")+'-'+later
 
 def divide_kr_line(inter_line):
     divided_line = ""
