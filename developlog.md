@@ -212,3 +212,30 @@ var translated = await tr.Translate(
         + 有些歌词会有很多重复的英文单词之类，可以考虑是不是这种情况就不输出
 5. 需要优化的地方：
     - 这几个代码都比较分散，如何能够整合成一个整体，实现一个完整的程序or软件的功能？是否能够像那天看到的那个一样，写一个小一点的界面系统
+
+# 2018-04-11 21:46:37
+写个访问NAVER实现查询功能的程序好了。
+
+# 2018-04-11 22:47:26
+https://developers.naver.com/docs/common/openapiguide/apilist.md
+这个好6，有语音识别和翻译的API接口，可以考虑怎么弄能弄出来。
+以下Naver Open API是一个非登录开放式API。
+搜索：Naver是一个API，允许您按类别查看搜索结果，如新闻，百科全书，博客，购物，电影，网络文档，专业信息，知识，书籍，此外，本地搜索结果，成人搜索字词和提供翻译的功能。
+分享：一种API，可让您在Naver博客，Naver Cafe和PHOLAR上分享您的内容。
+缩短网址：http://me2.do/example允许将源网址作为相同类型的简短网址返回的API。
+地图：一种API，允许您将Naver地图用于Web服务或应用程序。
+Capcha（图像）：一种API，使Naver服务使用的图像捕获功能可用于外部服务。
+Clova人脸识别：一种API，允许您创建人脸识别应用程序或人脸检测应用程序。
+Clova语音识别：识别语音数据（韩语，英语，日语，简体中文）并返回文本的API。
+Clova语音合成：一种将输入文本转换为旁白语音（韩语，英语，日语，中文（简体））的API并将其返回。
+Papago NMT Translation：基于人工神经网络技术返回机器翻译结果的API（支持的语言：英语，中文（简体））。
+Papago SMT翻译：返回基于统计信息的机器翻译结果的API（支持的语言：英语，日语，中文（简体，繁体））。
+
+# 2018-04-11 23:20:52
+太帅了，直接用NAVER的接口就可以做到想要实现的功能了！！！而且还非常权威
+[这是能够查看注册的这个应用程序的网页，可能需要NAVER登录(chayeenh 常用&那套)](https://developers.naver.com/apps/#/myapps/6ddZm8q0h4ZSPBvjASUT/overview)：每天限额是10000个字符，也就是说10000个韩文字，这是Papago SMT 번역，还可以也用NMT翻译，又有10000个字。Clova Speech Recognition 0/3600，Clova Speech Synthesis 0/10000。
+[API常用指南，可以用网页翻译器直接翻译成中文，好看](https://developers.naver.com/docs/datalab/search/)
+[这个是教怎么管理自己的应用程序，最多可以注册10个应用程序](https://developers.naver.com/docs/common/openapiguide/appconf.md)
+[这是详细的请求响应的字段有哪些](https://developers.naver.com/docs/nmt/reference/)
+[还是和上面的一样，API常用指南](https://developers.naver.com/docs/common/openapiguide/README.md)
+[这是开发者论坛，上面应该会有一些帮助，虽然都是韩语，但只要能翻译就能看个大概](https://developers.naver.com/forum/list)
