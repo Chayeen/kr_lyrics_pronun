@@ -1,60 +1,62 @@
-#爬取网易云音乐我的歌单里面所有歌曲的歌词
+# 爬取网易云音乐某个歌单里面所有歌曲的歌词
 import json
 import requests
 import re
 import urllib
 from bs4 import *
 import pdb
+import sys
+import os
+
 # 955274121 韩语
-# 614151599 我喜欢的
+# 614151599 Jachin喜欢的音乐
 # 40131331 百变女王T-ara 绝妙中速慢节奏
 # 53656860 T-ara无重复精选
 # 153369263 Queen's福利，T-ara无重复最全收录
-url = "http://music.163.com/playlist?id=153369263"
-headers = {"Host":" music.163.com","User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"
-#不必要的header属性可能会影响响应报文的编码方式，所以把它们注释掉
-#"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-#"Accept-Language":" zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3",
-#"Referer":"http://music.163.com/",
-#"Cookie": "JSESSIONID-WYYY=k52%2FPjMyNbX0v38jH2efUXwEIZpw2NagEUzwTX%2FgifMsoMswU6yo3NN%5C%2Bb9jCpsRFZIc6lvPUK9wEjgBzwM%2B1T%2FRyvRGHhqyWbdvEcugCbNqTihfxHK1el66fk%2BNntcSwGVOBMEwlcFDBusingcH76NIeAQwbC6h%5CcipxCdO8T5IfBVO%3A1510825875526; _iuqxldmzr_=32; _ntes_nnid=e5ec3ba6b841b9d3eadcb910066f4dcb,1510815153893; _ntes_nuid=e5ec3ba6b841b9d3eadcb910066f4dcb; __utma=94650624.1386008069.1510815154.1510815154.1510824076.2; __utmz=94650624.1510815154.1.1.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; __utmb=94650624.2.10.1510824076; __utmc=94650624",
-#"Connection": "keep-alive",
-#"Upgrade-Insecure-Requests": "1"
-}
-#只传url不能获得响应，需要传header
-request = urllib.request.Request(url,headers=headers)
-response = urllib.request.urlopen(request)
 
-#不decode的话text是十六进制，不是中文
+# 接收输入参数，必须是歌单的一串数字，默认爬取无重复精选；不是一串数字or唱过接收输入参数个数直接退出程序
+if len(sys.argv) == 1:
+    songlistid = "53656860"
+elif len(sys.argv) == 2:
+    try:
+        songlistid = int(sys.argv[1])
+    except Exception as e:
+        print("input error! songlistid need a string of numbers, no more other character!")
+        sys.exit(1)
+    songlistid = sys.argv[1]
+else:
+    print("input params over 2, just input one songlistid!")
+    sys.exit(1)
+
+# 获取当前文件目录，检查是否有lyrics文件夹，如果不存在则自动新建文件夹
+# pdb.set_trace()
+File_Path = os.getcwd() +'/lyrics/'
+if not os.path.exists(File_Path):
+    os.makedirs(File_Path)
+
+# 拼接请求数据包：只传url不能获得响应，需要传header
+url = "http://music.163.com/playlist?id="+songlistid
+headers = {"Host":" music.163.com","User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"}
+request = urllib.request.Request(url,headers=headers)
+# 发起请求
+response = urllib.request.urlopen(request)
+# 获取返回的网页，用utf-8编码解码：不decode的话text是十六进制，不是中文
 html = response.read().decode('utf-8','ignore')
 soup = BeautifulSoup(html, "html.parser")
 
-# links = soup.find('ul', class_='f-hide').findall('a')
-# song_id = link.get('href').split('=')[-1]
-# song_name = link.get_text()
-# print(song_id,song_name)
-
-# print(soup)
-
-# print(soup.ul.children)
-#打开1.txt 把歌单中的歌词写入
-# f=open('./myfavoritesong.txt','w',encoding='utf-8')
 for item in soup.ul.children:
-    #取出歌单里歌曲吗名
-    song_name = item('a')[0].get_text()
-    # print(song_name)
-    # pdb.set_trace()
-    f=open('./lyrics/'+song_name+'.txt','w',encoding='utf-8')
-    # f.write(song_name)
-    #取出歌单里歌曲的id  形式为：/song?id=11111111
+    # 取出歌单里歌曲的id  形式为：/song?id=11111111
     song_id = item('a')[0].get("href",None)
-    #利用正则表达式提取出song_id的数字部分sid
+    # 利用正则表达式提取出song_id的数字部分sid
     pat = re.compile(r'[0-9].*$')
     sid = re.findall(pat,song_id)[0]
-    #这里的url是真实的歌词页面
+
+    # 拼接url，获取真实的歌词页面，发起请求
     url = "http://music.163.com/api/song/lyric?"+"id="+str(sid)+"&lv=1&kv=1&tv=-1"
     html = requests.post(url)
     json_obj = html.text
-    #歌词是一个json对象 解析它
+
+    # 歌词是一个json对象，解析获取歌词文本
     j = json.loads(json_obj)
     try:
         lyric = j['lrc']['lyric']
@@ -63,11 +65,20 @@ for item in soup.ul.children:
     pat = re.compile(r'\[.*\]')
     lrc = re.sub(pat,"",lyric)
     lrc = lrc.strip()
-    # print(lrc)
+
+    # 取出歌单里歌曲名，以歌曲名为文件名，新建文件存储歌词
+    song_name = item('a')[0].get_text()
+    # song_name.replace('/','_')
+    # 上一句替换失败，只能暂时采取折中手段，如果歌曲名称中包含/字符就跳过无法保存，因为linux下文件命名规则不能包含/字符
+    if "/" in song_name:
+        continue
+        # print(song_name)
+        # pdb.set_trace()
+    f=open('./lyrics/'+song_name+'.txt','w',encoding='utf-8')
     f.write(lrc)
     f.close()
 
+
+# 代码参考：
 # 作者：小太阳花儿
 # 链接：https://www.jianshu.com/p/c0ae445023a2
-# 來源：简书
-# 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
