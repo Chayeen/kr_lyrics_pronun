@@ -239,3 +239,7 @@ Papago SMT翻译：返回基于统计信息的机器翻译结果的API（支持�
 [这是详细的请求响应的字段有哪些](https://developers.naver.com/docs/nmt/reference/)
 [还是和上面的一样，API常用指南](https://developers.naver.com/docs/common/openapiguide/README.md)
 [这是开发者论坛，上面应该会有一些帮助，虽然都是韩语，但只要能翻译就能看个大概](https://developers.naver.com/forum/list)
+
+
+# 2018-04-28 10:26:26
+突然又想到一个需求，统计歌词中韩文字（词）的出现频次，然后按照出现频次输出韩文字词，然后背诵更好。
