@@ -24,9 +24,10 @@ def divide_korean(temp_string):
     return first_parts[part_1] + second_parts[part_2] + third_parts[part_3]
 
 def double2single(double3):
-    if double3 == "ㄲ":
-        return "ㄱ"+ "ㄱ"
-    elif double3 == "ㄳ":
+    # if double3 == "ㄲ":
+        # return "ㄱ"+ "ㄱ"
+    # elif double3 == "ㄳ":
+    if double3 == "ㄳ":
         return "ㄱ" + "ㅅ"
     elif double3 == "ㄵ":
         return "ㄴ" + "ㅈ"
@@ -48,10 +49,11 @@ def double2single(double3):
         return "ㄹ" + "ㅎ"
     elif double3 == "ㅄ":
         return "ㅂ" + "ㅅ"
-    elif double3 == "ㅆ":
-        return "ㅅ" + "ㅅ"
+    # elif double3 == "ㅆ":
+    #     return "ㅅ" + "ㅅ"
     else:
-        print("input error, double3 must be in [ 'ㄲ', 'ㄳ',  'ㄵ', 'ㄶ',  'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅄ', 'ㅆ']")
+        # print("input error, double3 must be in [ 'ㄲ', 'ㄳ',  'ㄵ', 'ㄶ',  'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅄ', 'ㅆ']")
+        print("input error, double3 must be in [ 'ㄳ',  'ㄵ', 'ㄶ',  'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅄ']")
         # return double3
 
 def tight(single):
@@ -102,7 +104,7 @@ def list2str(ls):
 
 def necessary_re_compile(rels,repldic):
 # [必须规则]单收音连音化
-    former= ["ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ"]
+    former= ["ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㄲ","ㅆ"]
     later = "ㅇ"
     for x in former:
             rels.append(re.compile(x+'-'+later))
@@ -113,7 +115,7 @@ def necessary_re_compile(rels,repldic):
     rels.append(re.compile(former+'-'+later))
     repldic[re.compile(former+'-'+later)] = '-'+later
 # [必须规则]双收音连音化
-    former = ["ㄲ","ㄵ","ㄺ","ㄻ","ㄼ","ㄾ","ㄿ"]
+    former = ["ㄵ","ㄺ","ㄻ","ㄼ","ㄾ","ㄿ"]
     later = "ㅇ"
     for x in former:
             rels.append(re.compile(x+'-'+later))
@@ -126,7 +128,7 @@ def necessary_re_compile(rels,repldic):
             doubledivide = double2single(x)
             repldic[re.compile(x+'-'+later)] = '-'+doubledivide[0]
 # [必须规则] ㅅ连音需紧音化
-    former = ["ㄳ","ㄽ","ㅄ","ㅆ"]
+    former = ["ㄳ","ㄽ","ㅄ"]
     for x in former:
             rels.append(re.compile(x+'-'+later))
             doubledivide = double2single(x)
@@ -197,7 +199,7 @@ def necessary_re_compile(rels,repldic):
     later = "ㅎ"
     for x in former:
             rels.append(re.compile(x+'-'+later))
-            if x == "ㄱ":
+            if x == "ㄱ" or x == "ㄲ":
                 repldic[re.compile(x+'-'+later)] = '-'+ aspirate("ㄱ")
             else:
                 doubledivide = double2single(x)
